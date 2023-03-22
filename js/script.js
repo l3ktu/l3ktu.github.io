@@ -8,7 +8,7 @@ function getStats() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         var response = JSON.parse(xhr.responseText);
         var level = response.games.csgo.faceit_elo / 100;
-        document.getElementById("stats").innerHTML = "Level: " + response;
+        document.getElementById("stats").innerHTML = "Level: " + response.toString();;
       }
     };
     xhr.send();
