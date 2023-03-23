@@ -1,7 +1,3 @@
-var playerName = window.location.pathname.split("/").pop();
-
-document.getElementById("player-name").textContent = playerName;
-
 function getStats() {
   var username = document.getElementById("username").value;
   var url = "https://open.faceit.com/data/v4/players?nickname=" + username;
@@ -12,7 +8,7 @@ function getStats() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
       var playerName = response.nickname;
-      var newUrl = `https://l3ktu.github.io/player/${playerName}`;
+      var newUrl = `https://l3ktu.github.io/player/?username=${playerName}`;
       window.location.href = newUrl;
     }
   };
