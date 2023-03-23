@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Faceit Stats TEST</title>
-	<link rel="stylesheet" href="./css/style.css">
+	<title>Faceit Stats</title>
 </head>
 <body>
-	<h1>Faceit Stats Checker</h1>
-	<label for="username">Enter Faceit username:</label>
-	<input type="text" id="username" name="username">
-	<button onclick="getStats()">Check Stats</button>
-	<div id="stats"></div>
+	<form id="faceitForm" onsubmit="submitForm(event)">
+		<label for="faceitUsername">Enter your Faceit username:</label>
+		<input type="text" id="faceitUsername" name="faceitUsername">
+		<input type="submit" value="Submit">
+	</form>
 	<script src="./js/script.js"></script>
 </body>
 </html>
