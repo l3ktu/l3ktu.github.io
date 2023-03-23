@@ -1,3 +1,7 @@
+var playerName = window.location.pathname.split("/").pop();
+
+document.getElementById("player-name").textContent = playerName;
+
 function getStats() {
   var username = document.getElementById("username").value;
   var url = "https://open.faceit.com/data/v4/players?nickname=" + username;
