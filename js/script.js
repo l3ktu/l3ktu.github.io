@@ -13,3 +13,21 @@ function getStats() {
     };
     xhr.send();
   }
+
+  // Get the button element
+const checkStatsBtn = document.getElementById('stats');
+
+// Add a click event listener to the button
+checkStatsBtn.addEventListener('click', () => {
+  // Get the input element containing the player name
+  const playerNameInput = document.getElementById('username');
+
+  // Get the player name from the input
+  const playerName = playerNameInput.value;
+
+  // Construct the new URL with the player name
+  const newUrl = `https://l3ktu.github.io/player/${playerName}`;
+
+  // Set the new URL as the current location
+  window.location.href = newUrl;
+});
