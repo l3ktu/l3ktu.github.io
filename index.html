@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banned Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Banned Users</h1>
+    <ul id="banned-list">
+        <!-- Banned users will be added here dynamically -->
+    </ul>
+
+    <script>
+        // You would need to use JavaScript and Discord API to fetch and display the banned users.
+        // This is just a placeholder example.
+        const bannedUsers = [
+            { username: "User1", reason: "Violation of rules" },
+            { username: "User2", reason: "Spamming" },
+            { username: "User3", reason: "Inappropriate behavior" },
+        ];
+
+        const bannedList = document.getElementById("banned-list");
+
+        bannedUsers.forEach(user => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<strong>${user.username}</strong>: ${user.reason}`;
+            bannedList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
